@@ -23,7 +23,7 @@ jobs:
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install nodejs
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install npm
       - run: npm install md-file-tree -g
-      - run: ./hack/doc_gen.sh
+      - run: chmod +x ./hack/doc_gen.sh && ./hack/doc_gen.sh
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3.7.3
