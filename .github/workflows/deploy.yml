@@ -30,7 +30,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3.7.3
         with:
           personal_token: ${{ secrets.KUSIONSTACK_BOT_TOKEN }}
-          external_repository: KusionStack/Konfig
+          external_repository: KusionStack/konfig
           publish_dir: ./docs
           publish_branch: dev/xiarui.xr/gen-docs
           user_name: 'github-actions[bot]'
