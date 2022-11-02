@@ -14,6 +14,8 @@ __pycache__
 __kclcache__
 .kclvm
 
+# auto generated docs
+docs/
 
 # test report
 report/
