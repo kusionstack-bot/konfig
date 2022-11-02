@@ -1,0 +1,5 @@
+name: Kusion Models Documentation
+description: The Documentation of Models built by Kusion
+url: "http://kusionstack.io/konfig"
+markdown: GFM
+highlighter: rouge
