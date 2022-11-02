@@ -1,0 +1,33 @@
+name: build-and-deploy
+on:
+  push:
+    branches:
+    - main
+    - feature/doc-gen-script
+  pull_request:
+    branches:
+    - main
+    types:
+    - closed
+jobs:
+  deploy:
+    if: (github.event_name == 'push') || github.event.pull_request.merged == true
+    runs-on: ubuntu-18.04
+    container: 
+      image: kusionstack/kusion:latest
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v2
+
+      - run: npm install md-file-tree -g
+      - run: ./hack/doc_gen.sh
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.7.3
+        with:
+          personal_token: ${{ secrets.KUSIONSTACK_BOT_TOKEN }}
+          external_repository: KusionStack/Konfig
+          publish_dir: ./docs
+          publish_branch: dev/xiarui.xr/gen-docs
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
