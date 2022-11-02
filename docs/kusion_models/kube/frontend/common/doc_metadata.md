@@ -1,6 +1,6 @@
 # metadata
 
-Source: [base/pkg/kusion_models/kube/frontend/common/metadata.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/common/metadata.k)
+Source: [base/pkg/kusion_models/kube/frontend/common/metadata.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/common/metadata.k)
 
 ## Schema Metadata
 

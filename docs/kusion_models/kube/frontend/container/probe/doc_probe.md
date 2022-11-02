@@ -1,6 +1,6 @@
 # probe
 
-Source: [base/pkg/kusion_models/kube/frontend/container/probe/probe.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/container/probe/probe.k)
+Source: [base/pkg/kusion_models/kube/frontend/container/probe/probe.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/container/probe/probe.k)
 
 ## Schema Probe
 

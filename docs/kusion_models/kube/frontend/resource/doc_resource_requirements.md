@@ -1,6 +1,6 @@
 # resource_requirements
 
-Source: [base/pkg/kusion_models/kube/frontend/resource/resource_requirements.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/resource/resource_requirements.k)
+Source: [base/pkg/kusion_models/kube/frontend/resource/resource_requirements.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/resource/resource_requirements.k)
 
 ## Schema ResourceRequirements
 
@@ -10,8 +10,8 @@ ResourceRequirements describes the compute resource requirements..
 
 |Name and Description|Type|Default Value|Required|
 |--------------------|----|-------------|--------|
-|**limits**<br />A Container-level attribute.<br />Limits describes the maximum amount of compute resources allowed. <br />More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/|[Resource](doc_resource.md#schema-resource)|Undefined|**required**|
-|**requests**<br />A Container-level attribute.<br />Requests describes the minimum amount of compute resources required. <br />If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. <br />More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/|[Resource](doc_resource.md#schema-resource)|Undefined|**required**|
+|**limits**<br />A Container-level attribute.<br />Limits describes the maximum amount of compute resources allowed. <br />More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/|[Resource](doc_resource#schema-resource)|Undefined|**required**|
+|**requests**<br />A Container-level attribute.<br />Requests describes the minimum amount of compute resources required. <br />If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. <br />More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/|[Resource](doc_resource#schema-resource)|Undefined|**required**|
 ### Examples
 ```python
 import base.pkg.kusion_models.kube.frontend.resource as res

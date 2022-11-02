@@ -1,6 +1,6 @@
 # volume
 
-Source: [base/pkg/kusion_models/kube/frontend/volume/volume.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/volume/volume.k)
+Source: [base/pkg/kusion_models/kube/frontend/volume/volume.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/volume/volume.k)
 
 ## Schema Volume
 

@@ -1,13 +1,13 @@
 # configmap
 
-Source: [base/pkg/kusion_models/kube/frontend/configmap/configmap.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/configmap/configmap.k)
+Source: [base/pkg/kusion_models/kube/frontend/configmap/configmap.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/configmap/configmap.k)
 
 ## Schema ConfigMap
 
 ConfigMap holds configuration data for pods to consume.<br />More info: https://kubernetes.io/docs/reference/kubernetes-api/config-and-storage-resources/config-map-v1/\#ConfigMap
 
 ### Base Schema
-[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata.md#schema-metadata)
+[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata#schema-metadata)
 
 ### Attributes
 

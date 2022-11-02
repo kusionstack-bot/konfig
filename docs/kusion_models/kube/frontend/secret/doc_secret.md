@@ -1,13 +1,13 @@
 # secret
 
-Source: [base/pkg/kusion_models/kube/frontend/secret/secret.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/secret/secret.k)
+Source: [base/pkg/kusion_models/kube/frontend/secret/secret.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/secret/secret.k)
 
 ## Schema Secret
 
 Secret holds secret data of a certain type. <br />The total bytes of the values in the Data field<br />must be less than MaxSecretSize bytes.
 
 ### Base Schema
-[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata.md#schema-metadata)
+[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata#schema-metadata)
 
 ### Attributes
 

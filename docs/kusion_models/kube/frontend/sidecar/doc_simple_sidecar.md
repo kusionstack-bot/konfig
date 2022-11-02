@@ -1,6 +1,6 @@
 # simple_sidecar
 
-Source: [base/pkg/kusion_models/kube/frontend/sidecar/simple_sidecar.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/sidecar/simple_sidecar.k)
+Source: [base/pkg/kusion_models/kube/frontend/sidecar/simple_sidecar.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/sidecar/simple_sidecar.k)
 
 ## Schema SimpleSidecar
 

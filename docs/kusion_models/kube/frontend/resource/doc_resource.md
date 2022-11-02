@@ -1,6 +1,6 @@
 # resource
 
-Source: [base/pkg/kusion_models/kube/frontend/resource/resource.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/resource/resource.k)
+Source: [base/pkg/kusion_models/kube/frontend/resource/resource.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/resource/resource.k)
 
 ## Schema Resource
 

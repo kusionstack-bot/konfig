@@ -1,20 +1,20 @@
 # service
 
-Source: [base/pkg/kusion_models/kube/frontend/service/service.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/service/service.k)
+Source: [base/pkg/kusion_models/kube/frontend/service/service.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/service/service.k)
 
 ## Schema Service
 
 Service are Kubernetes objects which partition a single Kubernetes cluster into multiple virtual clusters.<br />More info: https://kubernetes.io/docs/reference/kubernetes-api/service-resources/service-v1/\#Service
 
 ### Base Schema
-[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata.md#schema-metadata)
+[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata#schema-metadata)
 
 ### Attributes
 
 |Name and Description|Type|Default Value|Required|
 |--------------------|----|-------------|--------|
 |**selector**<br />Route service traffic to pods with label keys and values matching this selector.<br />More info: https://kubernetes.io/docs/concepts/services-networking/service/|{str: str}|Undefined|optional|
-|**ports**<br />The list of ports that are exposed by this service. <br />More info: https://kubernetes.io/docs/concepts/services-networking/service/\#virtual-ips-and-service-proxies|[[v1.ServicePort](../../../../kusion_kubernetes/api/core/v1/doc_service_port.md#schema-serviceport)]|Undefined|optional|
+|**ports**<br />The list of ports that are exposed by this service. <br />More info: https://kubernetes.io/docs/concepts/services-networking/service/\#virtual-ips-and-service-proxies|[[v1.ServicePort](../../../../kusion_kubernetes/api/core/v1/doc_service_port#schema-serviceport)]|Undefined|optional|
 |**clusterIP**<br />clusterIP is the IP address of the service and is usually assigned randomly by the master.<br />More info: https://kubernetes.io/docs/concepts/services-networking/service/\#virtual-ips-and-service-proxies|str|None|optional|
 |**type**<br />determines how the Service is exposed.<br />More info: https://kubernetes.io/docs/concepts/services-networking/service/\#publishing-services-service-types|str|"ClusterIP"|optional|
 |**externalIPs**<br />externalIPs is a list of IP addresses for which nodes in the cluster will also accept traffic for this service.|[str]|Undefined|optional|

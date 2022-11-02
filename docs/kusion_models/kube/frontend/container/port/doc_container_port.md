@@ -1,6 +1,6 @@
 # container_port
 
-Source: [base/pkg/kusion_models/kube/frontend/container/port/container_port.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/container/port/container_port.k)
+Source: [base/pkg/kusion_models/kube/frontend/container/port/container_port.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/container/port/container_port.k)
 
 ## Schema ContainerPort
 

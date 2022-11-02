@@ -1,25 +1,27 @@
 # ingress
 
-Source: [base/pkg/kusion_models/kube/frontend/ingress/ingress.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/ingress/ingress.k)
+Source: [base/pkg/kusion_models/kube/frontend/ingress/ingress.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/ingress/ingress.k)
 
 ## Schema Ingress
 
 Ingress is a collection of rules that allow inbound connections to reach the endpoints defined by a backend. <br />An Ingress can be configured to give services externally-reachable urls, load balance traffic, terminate SSL, offer name based virtual hosting etc.
 
 ### Base Schema
-[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata.md#schema-metadata)
+[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata#schema-metadata)
 
 ### Attributes
 
 |Name and Description|Type|Default Value|Required|
 |--------------------|----|-------------|--------|
-|**rules**<br />A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.|[[v1.IngressRule](../../../../kusion_kubernetes/api/networking/v1/doc_ingress_rule.md#schema-ingressrule)]|Undefined|optional|
+|**rules**<br />A list of host rules used to configure the Ingress. If unspecified, or no rule matches, all traffic is sent to the default backend.|[[v1.IngressRule](../../../../kusion_kubernetes/api/networking/v1/doc_ingress_rule#schema-ingressrule)]|Undefined|optional|
+|**tls**<br />TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.|[[v1.IngressTLS](../../../../kusion_kubernetes/api/networking/v1/doc_ingress_tls#schema-ingresstls)]|Undefined|optional|
 ### Examples
 ```python
 ingress.Ingress {
     name = "example-ingress"
     rules = [
         {
+            host = "your-domain.com"
             http.paths = [
                 {
                     path = "/apple"
@@ -30,6 +32,12 @@ ingress.Ingress {
                     }
                 }
             ]
+        }
+    ]
+    tls = [
+        {
+          hosts = ["your-domain.com"]
+          secretName = "example-ingress-tls"
         }
     ]
 }

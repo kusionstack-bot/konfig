@@ -1,19 +1,19 @@
 # service_account
 
-Source: [base/pkg/kusion_models/kube/frontend/serviceaccount/service_account.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/serviceaccount/service_account.k)
+Source: [base/pkg/kusion_models/kube/frontend/serviceaccount/service_account.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/serviceaccount/service_account.k)
 
 ## Schema ServiceAccount
 
 A service account provides an identity for processes that run in a Pod.<br /> ServiceAccount binds together:<br />    - a name, understood by users, and perhaps by peripheral systems, for an identity<br />    - a principal that can be authenticated and authorized<br />    - a set of secrets<br />More info: https://kubernetes.io/docs/reference/kubernetes-api/authentication-resources/service-account-v1/\#ServiceAccount
 
 ### Base Schema
-[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata.md#schema-metadata)
+[@base.pkg.kusion_models.kube.frontend.common.Metadata](../common/doc_metadata#schema-metadata)
 
 ### Attributes
 
 |Name and Description|Type|Default Value|Required|
 |--------------------|----|-------------|--------|
-|**imagePullSecrets**<br />ImagePullSecrets is a list of references to secrets in the same namespace to use for pulling any images in pods that reference this ServiceAccount.<br />More info: https://kubernetes.io/docs/concepts/containers/images/\#specifying-imagepullsecrets-on-a-pod<br />secrets: [{str:str}], default is Undefined, optional.<br />Secrets is the list of secrets allowed to be used by pods running using this ServiceAccount.<br />More info: https://kubernetes.io/docs/concepts/configuration/secret|[{str: str}]|Undefined|optional|
+|**imagePullSecrets**|[{str: str}]|Undefined|optional|
 |**secrets**|[{str: str}]|Undefined|optional|
 ### Examples
 ```python

@@ -1,6 +1,6 @@
 # env
 
-Source: [base/pkg/kusion_models/kube/frontend/container/env/env.k](https://github.com/KusionStack/konfig/tree/main//base/pkg/kusion_models/kube/frontend/container/env/env.k)
+Source: [base/pkg/kusion_models/kube/frontend/container/env/env.k](https://github.com/KusionStack/konfig/tree/main/base/pkg/kusion_models/kube/frontend/container/env/env.k)
 
 ## Schema Env
 
@@ -24,6 +24,7 @@ EnvValueFrom represents the source of the value of an Env.
 |**fieldRef**<br />A Container-level attribute.<br />Selects a key of a field.|[ObjectFieldSelector](#schema-objectfieldselector)|Undefined|optional|
 |**configMapKeyRef**<br />A Container-level attribute.<br />Selects a key of a ConfigMap.|[ObjectKeySelector](#schema-objectkeyselector)|Undefined|optional|
 |**secretKeyRef**<br />A Container-level attribute.<br />Selects a key of a secret.|[ObjectKeySelector](#schema-objectkeyselector)|Undefined|optional|
+|**resourceFieldRef**<br />A Container-level attribute.<br />Selects a resource of the container: only resources limits and requests <br />(limits.cpu, limits.memory, limits.ephemeral-storage, requests.cpu, requests.memory and requests.ephemeral-storage) are currently supported.|[ResourceFieldSelector](#schema-resourcefieldselector)|Undefined|optional|
 ## Schema ObjectKeySelector
 
 ObjectKeySelector contains enough information to let you locate the referenced object.
@@ -42,8 +43,19 @@ ObjectFieldSelector contains enough information to let you select field of an ob
 
 |Name and Description|Type|Default Value|Required|
 |--------------------|----|-------------|--------|
-|**apiVersion**<br />A Container-level attribute.<br />Version of the schema the FieldPath is written in terms of.|str|Undefined|**required**|
+|**apiVersion**<br />A Container-level attribute.<br />Version of the schema the FieldPath is written in terms of, defaults to "v1".|str|v1|optional|
 |**fieldPath**<br />A Container-level attribute.<br />Path of the field to select of an object.|str|Undefined|**required**|
+## Schema ResourceFieldSelector
+
+ResourceFieldSelector represents container resources (cpu, memory) and their output format.
+
+### Attributes
+
+|Name and Description|Type|Default Value|Required|
+|--------------------|----|-------------|--------|
+|**containerName**<br />A Container-level attribute.|str|Undefined, required for volumes, optional for env vars.|optional|
+|**resource**<br />A Container-level attribute.<br />Resource to select.|str|Undefined|**required**|
+|**divisor**<br />A Container-level attribute.<br />Specifies the output format of the exposed resources, defaults to 1|int \| number_multiplier|1|optional|
 ## Schema EnvFromSource
 
 EnvFromSource represents the source of a set of ConfigMaps or Secrets.
