@@ -19,6 +19,8 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
+      - run: sudo apt install nodejs
+      - run: sudo apt install npm
       - run: npm install md-file-tree -g
       - run: ./hack/doc_gen.sh
 
