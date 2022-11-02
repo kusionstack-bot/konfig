@@ -19,6 +19,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v2
 
+      - run: apt-get update
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install nodejs
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install npm
       - run: npm install md-file-tree -g
