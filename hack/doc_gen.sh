@@ -2,7 +2,7 @@ rm -rf docs
 
 OUTPUT_DIR="docs/"
 SOURCE_CODE_URL="https://github.com/KusionStack/konfig/tree/main"
-FILES="base/pkg"
+FILES="$PWD/base/pkg"
 
 SCRIPT="kcl-doc generate $FILES -R -o $OUTPUT_DIR --repo-url $SOURCE_CODE_URL"
 
