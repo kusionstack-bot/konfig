@@ -11,10 +11,10 @@ echo $SCRIPT
 $($SCRIPT)
 
 # remove specific directorys which contain backend/render/mixins/utils logic schemas. Only frontend/backend model docs are reserved.
-find ./docs  -type dir -name 'backend' -exec rm -rf {} +
-find ./docs  -type dir -name 'mixins' -exec rm -rf {} +
-find ./docs  -type dir -name 'render' -exec rm -rf {} +
-find ./docs  -type dir -name 'utils' -exec rm -rf {} +
+find ./docs  -type d -name 'backend' -exec rm -rf {} +
+find ./docs  -type d -name 'mixins' -exec rm -rf {} +
+find ./docs  -type d -name 'render' -exec rm -rf {} +
+find ./docs  -type d -name 'utils' -exec rm -rf {} +
 
 # remove unnecessary nested dirs
 mv docs/base/pkg/* docs/

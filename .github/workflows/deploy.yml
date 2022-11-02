@@ -22,6 +22,7 @@ jobs:
       - run: apt-get update
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install nodejs
       - run: export DEBIAN_FRONTEND=noninteractive && apt -yq install npm
+      - run: export DEBIAN_FRONTEND=noninteractive && apt-get -yq install git
       - run: npm install md-file-tree -g
       - run: chmod +x ./hack/doc_gen.sh && ./hack/doc_gen.sh
 
