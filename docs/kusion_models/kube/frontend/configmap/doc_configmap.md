@@ -12,6 +12,7 @@ ConfigMap holds configuration data for pods to consume.<br />More info: https://
 ### Attributes
 
 |Name and Description|Type|Default Value|Required|
+
 |--------------------|----|-------------|--------|
 |**data**<br />Data contains the configuration data.|{str: str}|Undefined|optional|
 |**binaryData**<br />BinaryData contains the binary data.|{str: str}|Undefined|optional|
